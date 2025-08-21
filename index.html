@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Para o Amor da Minha Vida ❤️</title>
+  <style>
+    body {
+      background: black;
+      color: #00ff00;
+      font-family: "Courier New", monospace;
+      padding: 20px;
+      text-align: center;
+    }
+    #terminal {
+      text-align: left;
+      width: 80%;
+      margin: auto;
+      background: #111;
+      border: 2px solid #00ff00;
+      border-radius: 10px;
+      padding: 20px;
+      min-height: 300px;
+    }
+    .foto {
+      display: none;
+      margin: 20px auto;
+      max-width: 300px;
+      border: 3px solid #00ff00;
+      border-radius: 15px;
+    }
+    .msg {
+      font-size: 18px;
+      margin-top: 20px;
+      display: none;
+      color: #ff66cc;
+    }
+  </style>
+</head>
+<body>
+  <h1>💻 Programa do Amor 💻</h1>
+  <div id="terminal"></div>
+  <img id="foto1" src="2ddc821a-3f48-4ce2-9d7c-819a9a28c9cd.png" class="foto">
+  <img id="foto2" src="e3253802-9612-4c3a-a050-8a2f7f6332a1.png" class="foto">
+  <img id="foto3" src="70d6a014-ecad-4132-a4b8-84af74a38f55.png" class="foto">
+  <img id="foto4" src="33878e4b-6d8b-480e-969b-2318c8bc7852.png" class="foto">
+  <img id="foto5" src="7a86639c-80e9-42d4-9ca1-9b016b73fd91.png" class="foto">
+  <img id="foto6" src="90589be0-e1a0-45fe-a09a-c3c4dd40add6.png" class="foto">
+  <img id="foto7" src="615280db-d703-4fa3-b1e1-f826cf61fc43.png" class="foto">
+  <img id="foto8" src="d9424462-cbb1-44f9-9866-22a0ad87736a.png" class="foto">
+  <img id="foto9" src="9bb313d4-36fa-472a-8324-0d663cc23300.png" class="foto">
+  <img id="foto10" src="41bf02fe-e2c2-4cfc-8b7a-522652732abb.png" class="foto">
+
+  <div class="msg" id="msg">Eu te amo mais do que tudo ❤️</div>
+
+  <script>
+    const terminal = document.getElementById("terminal");
+    const texto = [
+      "Inicializando programa...",
+      "Carregando sentimentos...",
+      "Importando memórias felizes...",
+      "Compilando sorrisos...",
+      "Executando declaração...",
+    ];
+    let i = 0;
+
+    function escreverLinha() {
+      if (i < texto.length) {
+        terminal.innerHTML += "<p>> " + texto[i] + "</p>";
+        i++;
+        setTimeout(escreverLinha, 1500);
+      } else {
+        mostrarFotos();
+      }
+    }
+
+    function mostrarFotos() {
+      let fotos = document.querySelectorAll(".foto");
+      fotos.forEach((foto, index) => {
+        setTimeout(() => {
+          foto.style.display = "block";
+        }, index * 1500);
+      });
+      setTimeout(() => {
+        document.getElementById("msg").style.display = "block";
+      }, fotos.length * 1500 + 1000);
+    }
+
+    escreverLinha();
+  </script>
+</body>
+</html>
